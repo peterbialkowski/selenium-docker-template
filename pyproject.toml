@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "sel-docker"
+version = "0.1.0"
+description = ""
+authors = ["PeterWSL <peter.bialkowski@tillpayments.com>"]
+readme = "README.md"
+packages = [{include = "sel_docker"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+selenium = "^4.7.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

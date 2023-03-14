@@ -1,0 +1,15 @@
+version: "3"
+services:
+  pydockerapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - REMOTE_DRIVER=http://selenium:4444
+    # volumes:
+    #   - ./config:/config
+    depends_on: 
+      - selenium
+    command: bash -c "sleep 5; python3 /app/main.py"
+  selenium:
+    image: selenium/standalone-chrome
